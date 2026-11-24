@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --kip-void: #050505;
+  --kip-surface: #0c0c0c;
+  --kip-elevated: #141414;
+  --kip-border: #232018;
+  --kip-cream: #e8e2d6;
+  --kip-muted: #8a8376;
+  --kip-gold: #c9a227;
+  --kip-amber: #d4a574;
+  --kip-ink: #0a0805;
+  --background: var(--kip-void);
+  --foreground: var(--kip-cream);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-body), ui-sans-serif, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Subtle scrollbar for the story pane */
+main::-webkit-scrollbar {
+  width: 8px;
+}
+main::-webkit-scrollbar-track {
+  background: transparent;
+}
+main::-webkit-scrollbar-thumb {
+  background: #2a261c;
+  border-radius: 999px;
+}
